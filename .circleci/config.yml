@@ -1,14 +1,14 @@
- version: 2.1
- orbs:
+version: 2.1
+orbs:
   heroku: circleci/heroku@0.0.10
- jobs:
+jobs:
   test:
     docker: # run the steps with Docker
       - image: circleci/node:10.15.0
     steps:
       - checkout
       - run: npm install
- workflows:
+workflows:
   heroku_deploy:
     jobs:
       - test
@@ -18,4 +18,3 @@
           filters:
             branches:
               only: master # only run deploy-via-git job on master branch
-
