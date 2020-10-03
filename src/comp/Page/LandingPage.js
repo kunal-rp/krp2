@@ -21,7 +21,7 @@ class LandingPage extends React.Component {
                     </h1>
                     <h1 className="section">
                         The rest of the time I spend obsessing over{' '}
-                        <a href="https://www.youtube.com/user/FeelgHoodMusic">
+                        <a href="https://www.reddit.com/r/MechanicalKeyboards/">
                             Mechanical Keyboards
                         </a>
                         ,NBA stats, and{' '}
