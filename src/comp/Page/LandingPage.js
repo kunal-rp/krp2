@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from '@material-ui/core/Link'
 import Header from '../Header/Header'
 import Page from './Page'
 import { withTheme } from '@material-ui/core/styles'
@@ -7,6 +8,19 @@ import './LandingPage.scss'
 class LandingPage extends React.Component {
     render() {
         var mainContent = () => {
+            var createLink = (url, text) => {
+                return (
+                    <Link
+                        color="primary"
+                        underline="always"
+                        variant="inherit"
+                        href={url}
+                    >
+                        {text}
+                    </Link>
+                )
+            }
+
             return (
                 <div>
                     <h1 className="section">
@@ -17,17 +31,19 @@ class LandingPage extends React.Component {
                     </h1>
                     <h1 className="section">
                         I'm always trying something new over at my{' '}
-                        <a href="https://github.com/kunal-rp">GitHub</a>.
+                        {createLink('https://github.com/kunal-rp', 'GitHub')}.
                     </h1>
                     <h1 className="section">
                         The rest of the time I spend obsessing over{' '}
-                        <a href="https://www.reddit.com/r/MechanicalKeyboards/">
-                            Mechanical Keyboards
-                        </a>
+                        {createLink(
+                            'https://www.reddit.com/r/MechanicalKeyboards',
+                            'Mechanical Keyboards'
+                        )}
                         ,NBA stats, and{' '}
-                        <a href="https://www.youtube.com/watch?v=P5k-4-OEuTk">
-                            Augmented Reality
-                        </a>
+                        {createLink(
+                            'https://www.youtube.com/watch?v=P5k-4-OEuTk',
+                            'Augmented Reality'
+                        )}
                         .
                     </h1>
                 </div>

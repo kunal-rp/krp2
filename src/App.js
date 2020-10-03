@@ -1,26 +1,14 @@
 import React from 'react'
 import './App.css'
-import {
-    createMuiTheme,
-    responsiveFontSizes,
-    MuiThemeProvider,
-} from '@material-ui/core/styles'
+import { ThemeProvider } from '@material-ui/core/styles'
+import theme from './theme'
 import LandingPage from './comp/Page/LandingPage'
 
-const theme = responsiveFontSizes(
-    createMuiTheme({
-        typography: {
-            fontFamily: ['Roboto'],
-            h1: {},
-        },
-    })
-)
-
-function App() {
+const App = () => {
     return (
-        <MuiThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
             <LandingPage />
-        </MuiThemeProvider>
+        </ThemeProvider>
     )
 }
 
