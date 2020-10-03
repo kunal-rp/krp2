@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../Header/Header'
 import Page from './Page'
+import { withTheme } from '@material-ui/core/styles'
 import './LandingPage.scss'
 
 class LandingPage extends React.Component {
@@ -15,17 +16,17 @@ class LandingPage extends React.Component {
                         infastructure and microservices.
                     </h1>
                     <h1 className="section">
-                        Most of the time, I'm trying something new over at my{' '}
+                        I'm always trying something new over at my{' '}
                         <a href="https://github.com/kunal-rp">GitHub</a>.
                     </h1>
                     <h1 className="section">
-                        The rest of the time I spead obsessing over{' '}
+                        The rest of the time I spend obsessing over{' '}
                         <a href="https://www.youtube.com/user/FeelgHoodMusic">
                             Mechanical Keyboards
                         </a>
                         ,NBA stats, and{' '}
                         <a href="https://www.youtube.com/watch?v=P5k-4-OEuTk">
-                            and Augmented Reality
+                            Augmented Reality
                         </a>
                         .
                     </h1>
@@ -44,4 +45,4 @@ class LandingPage extends React.Component {
     }
 }
 
-export default LandingPage
+export default withTheme(LandingPage)

@@ -12,7 +12,6 @@ class Header extends React.Component {
             return (
                 <Container fluid>
                     <Row>
-                        <Col sm="4">Blog</Col>
                         <Col sm="4">Twitter</Col>
                         <Col sm="4">IG</Col>
                     </Row>
