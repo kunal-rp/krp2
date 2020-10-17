@@ -1,14 +1,15 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
+import { ThemeProvider } from '@material-ui/core/styles'
+import theme from './theme'
+import LandingPage from './comp/Page/LandingPage'
 
-import Page from './components/Page'
-
-function App() {
-  return (
-    <div className="App">
-        <Page/>
-    </div>
-  );
+const App = () => {
+    return (
+        <ThemeProvider theme={theme}>
+            <LandingPage />
+        </ThemeProvider>
+    )
 }
 
-export default App;
+export default App
