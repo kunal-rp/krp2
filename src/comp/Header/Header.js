@@ -1,29 +1,47 @@
 import React from 'react'
 import { Container, Col, Row, Image, Toast } from 'react-bootstrap'
+import Link from '@material-ui/core/Link'
 import './Header.scss'
 
 class Header extends React.Component {
     render() {
         var getLogo = () => {
-            return 'Kunal Purohit'
+            return <h3>KRP</h3>
+        }
+
+        var createLink = (url, text) => {
+            return (
+                <Link
+                    color="primary"
+                    underline="always"
+                    variant="inherit"
+                    href={url}
+                >
+                    {text}
+                </Link>
+            )
         }
 
         var getNav = () => {
             return (
                 <Container fluid>
                     <Row>
-                        <Col sm="4">Twitter</Col>
-                        <Col sm="4">IG</Col>
+                        <Col>{createLink("https://twitter.com/krptxt", "Twitter")}</Col>
+                        <Col>{createLink("https://www.instagram.com/krpimg", "Instagram")}</Col>
                     </Row>
                 </Container>
             )
         }
 
         return (
-            <Container fluid id="header_main">
+            <Container alignItems="center" fluid id="header_main">
                 <Row>
-                    <Col sm="4">{getLogo()}</Col>
-                    <Col sm={{ span: 4, offset: 4 }}>{getNav()}</Col>
+                    <Col md="8" sm="12">
+                        {getLogo()}
+                    </Col>
+                    <Col md="4" sm="12">
+                        {getNav()}
+                    </Col>
                 </Row>
             </Container>
         )
